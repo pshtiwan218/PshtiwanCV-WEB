@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pshtiwan Omer Ahmed</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--acc:#ff5a1f;--bg:#2f4a56;--bg2:#3a5865;--tx:#fff;--mut:#cfdde3;--card:rgba(255,255,255,.07);--bd:rgba(255,255,255,.14)}
+[data-theme=light]{--bg:#eef3f5;--bg2:#e0e9ed;--tx:#1d2d34;--mut:#4d6671;--card:#fff;--bd:rgba(0,0,0,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Poppins','Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;overflow-x:hidden;transition:background .4s,color .4s}
+[dir=rtl] body,[dir=rtl] button{font-family:'Noto Sans Arabic','Poppins',sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+header{position:fixed;inset:0 0 auto 0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 5%;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px)}
+.logo{width:38px;height:38px;border:2px solid var(--acc);border-radius:50%;display:grid;place-items:center;color:var(--acc);font-weight:700;font-size:14px}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{font-size:14px;font-weight:500;padding:2px 0;border-bottom:2px solid transparent;transition:.25s}
+nav a:hover,nav a.on{color:var(--acc);border-color:var(--acc)}
+.tools{display:flex;gap:8px;align-items:center}
+.pill{border:1px solid var(--acc);background:transparent;border-radius:20px;padding:4px 12px;font-size:13px;transition:.25s}
+.pill:hover,.pill.on{background:var(--acc);color:#fff}
+section{min-height:100vh;padding:110px 7% 60px;display:flex;flex-direction:column;justify-content:center;position:relative}
+h2{font-size:clamp(28px,4vw,40px);text-align:center;margin-bottom:36px}
+h2 span,.acc{color:var(--acc)}
+/* hero */
+#home{flex-direction:row;align-items:center;justify-content:space-between;gap:40px;overflow:hidden}
+.hero-t{max-width:560px;z-index:1}
+.hero-t h3{font-size:clamp(20px,3vw,28px);font-weight:600}
+.hero-t h1{font-size:clamp(34px,6vw,56px);line-height:1.2;margin:4px 0}
+.role{font-size:clamp(20px,3vw,28px);font-weight:600;min-height:1.7em}
+.role b{color:var(--acc);font-weight:700}
+.role i{display:inline-block;width:2px;height:1em;background:var(--acc);vertical-align:-.12em;margin-inline-start:3px;animation:bl 1s steps(1) infinite}
+.hero-t p{color:var(--mut);margin:14px 0 22px}
+.soc{display:flex;gap:12px;margin-bottom:26px}
+.soc a{width:40px;height:40px;border:2px solid var(--acc);border-radius:50%;display:grid;place-items:center;color:var(--acc);transition:.25s}
+.soc a:hover{background:var(--acc);color:#fff;transform:translateY(-3px)}
+.soc svg{width:18px;height:18px;fill:currentColor}
+.btn{display:inline-block;background:var(--acc);color:#fff;border-radius:30px;padding:10px 30px;font-weight:600;box-shadow:0 0 18px color-mix(in srgb,var(--acc) 55%,transparent);transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+.photo{position:relative;width:min(380px,70vw);aspect-ratio:1;flex:none;z-index:1}
+.photo .disc{position:absolute;inset:6%;border-radius:50%;background:var(--acc);overflow:hidden;display:grid;place-items:center;font-size:90px;font-weight:700;color:#fff}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo .ring{position:absolute;inset:0;border-radius:50%;border:3px dashed var(--acc);opacity:.6;animation:spin 24s linear infinite}
+.sh{position:absolute;border:2px solid var(--acc);opacity:.35;animation:fl 7s ease-in-out infinite}
+.s1{width:70px;height:70px;border-radius:50%;top:18%;inset-inline-start:46%}
+.s2{width:50px;height:50px;bottom:12%;inset-inline-start:8%;transform:rotate(20deg);animation-delay:-3s}
+.s3{width:34px;height:34px;border-radius:50%;background:var(--acc);top:30%;inset-inline-end:4%;animation-delay:-5s}
+/* about */
+.about{max-width:880px;margin:auto;text-align:center}
+.about p{color:var(--mut);margin-bottom:18px}
+.deg{display:inline-block;border:1px solid var(--acc);border-radius:14px;padding:14px 26px;background:var(--card)}
+.deg small{display:block;color:var(--acc);font-weight:600}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1100px;margin:auto;width:100%}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;transition:.3s}
+.card:hover{border-color:var(--acc);transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.card h4{font-size:16px;margin-bottom:6px}
+.card p{color:var(--mut);font-size:14px}
+.yr{display:inline-block;direction:ltr;unicode-bidi:isolate;background:var(--acc);color:#fff;border-radius:12px;padding:0 12px;font-size:12px;margin-top:8px}
+.alt{background:var(--bg2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:1px solid var(--acc);border-radius:20px;padding:3px 16px;font-size:14px}
+.card h3{color:var(--acc);margin-bottom:14px;font-size:18px}
+.ct{max-width:700px;margin:auto;display:grid;gap:16px;width:100%}
+.ct a,.ct div{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 22px;transition:.3s}
+.ct a:hover{border-color:var(--acc);transform:scale(1.02)}
+.ct em{font-style:normal;width:42px;height:42px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;flex:none}
+.ct bdi{direction:ltr;unicode-bidi:isolate}
+footer{text-align:center;padding:20px;color:var(--mut);font-size:13px;border-top:1px solid var(--bd)}
+/* motion */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.hero-t>*{animation:up .8s both}.hero-t>*:nth-child(2){animation-delay:.12s}.hero-t>*:nth-child(3){animation-delay:.24s}.hero-t>*:nth-child(4){animation-delay:.36s}.hero-t>*:nth-child(5){animation-delay:.48s}.hero-t>*:nth-child(6){animation-delay:.6s}
+.photo{animation:pop 1s .2s both}
+@keyframes up{from{opacity:0;transform:translateY(30px)}}
+@keyframes pop{from{opacity:0;transform:scale(.6)}}
+@keyframes bl{50%{opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fl{50%{transform:translateY(-22px) rotate(30deg)}}
+@media(max-width:820px){#home{flex-direction:column-reverse;text-align:center;justify-content:center}.soc{justify-content:center}nav{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <a href="#home" class="logo">PO</a>
+  <nav id="nav"></nav>
+  <div class="tools">
+    <button class="pill" data-l="ku">کوردی</button>
+    <button class="pill" data-l="ar">العربية</button>
+    <button class="pill" data-l="en">EN</button>
+    <button class="pill" id="th" aria-label="Theme">☀</button>
+  </div>
+</header>
+
+<section id="home">
+  <div class="hero-t">
+    <h3 data-i="hello"></h3>
+    <h1 data-i="name"></h1>
+    <div class="role"><span data-i="im"></span> <b id="ty"></b><i></i></div>
+    <p data-i="tag"></p>
+    <div class="soc">
+      <a href="tel:+9647501656601" aria-label="Phone"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.250.2 2.450.6 3.600a1 1 0 0 1-.25 1z"/></svg></a>
+      <a href="mailto:pshtiwanomar26@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4 7v1.500l8 5 8-5V7z"/></svg></a>
+      <a href="#contact" aria-label="Location"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg></a>
+    </div>
+    <a href="#contact" class="btn" data-i="hire"></a>
+  </div>
+  <i class="sh s1"></i><i class="sh s2"></i><i class="sh s3"></i>
+  <div class="photo">
+    <div class="ring"></div>
+    <div class="disc">P<img src="me1.png" alt="Pshtiwan Omer Ahmed" onerror="this.remove()"></div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <h2 data-i="t_about"></h2>
+  <div class="about rv">
+    <p data-i="about"></p>
+    <div class="deg"><small data-i="t_deg"></small><span data-i="deg"></span></div>
+  </div>
+</section>
+
+<section id="training"><h2 data-i="t_train"></h2><div class="grid" id="g_train"></div></section>
+<section id="experience" class="alt"><h2 data-i="t_exp"></h2><div class="grid" id="g_exp"></div></section>
+
+<section id="skills">
+  <h2 data-i="t_skills"></h2>
+  <div class="grid" id="g_skills"></div>
+</section>
+
+<section id="honors" class="alt"><h2 data-i="t_hon"></h2><div class="grid" id="g_hon"></div></section>
+
+<section id="contact">
+  <h2 data-i="t_contact"></h2>
+  <div class="ct rv">
+    <div><em>⌖</em><span data-i="addr"></span></div>
+    <a href="tel:+9647501656601"><em>✆</em><bdi>0750 165 6601</bdi></a>
+    <a href="tel:+9647728602388"><em>✆</em><bdi>0772 860 2388</bdi></a>
+    <a href="mailto:pshtiwanomar26@gmail.com"><em>✉</em><bdi>pshtiwanomar26@gmail.com</bdi></a>
+  </div>
+</section>
+<footer>© 2026 Pshtiwan Omer Ahmed</footer>
+
+<script>
+// each text: [English, Kurdish, Arabic]
+const L=['en','ku','ar'];
+const T={
+hello:["Hello, It's Me","سڵاو، من","مرحباً، أنا"],
+name:["Pshtiwan Omer Ahmed","پشتیوان عومەر ئەحمەد","بشتيوان عمر أحمد"],
+im:["I'm a","من","أنا"],
+tag:["English Education student passionate about learning, teamwork and serving the community.","خوێندکاری بەشی ئینگلیزی، حەزم لە فێربوون و کارکردنی تیمی و خزمەتکردنی کۆمەڵگەیە.","طالب في قسم اللغة الإنجليزية، شغوف بالتعلم والعمل الجماعي وخدمة المجتمع."],
+hire:["Contact Me","پەیوەندیم پێوە بکە","تواصل معي"],
+t_about:["About me","دەربارەی من","نبذة عني"],
+about:["I am an English Education student with a strong passion for learning and continuous personal and professional development. I am committed to improving my skills in education and related fields through dedication and hard work. I have strong teamwork and communication skills, and I enjoy collaborating with others in different environments. I am eager to gain further experience in both academic and professional settings to enhance my knowledge, build my capacity, and contribute effectively wherever I work.",
+"من خوێندکارێکی بەشی ئینگلیزیم و حەزێکی بەهێزم بۆ فێربوون و گەشەپێدانی بەردەوامی کەسی و پیشەییە. پابەندم بە باشترکردنی تواناکانم لە بواری پەروەردە و بوارە نزیکەکانی بە ماندووبوون و ئیشکردنی جددی. تواناییەکی باشم هەیە لە کاری تیمی و پەیوەندیکردن، و حەزم لە هاوکاری لەگەڵ کەسانی تر لە ژینگەی جیاواز. ئامادەم ئەزموونی زیاتر لە بواری ئەکادیمی و پیشەیی بەدەست بێنم بۆ زیادکردنی زانیاریم و بنیاتنانی توانام و بەشداریکردنی کاریگەر لە هەر شوێنێک کار بکەم.",
+"أنا طالب في قسم اللغة الإنجليزية ولدي شغف كبير بالتعلم والتطور الشخصي والمهني المستمر. ألتزم بتحسين مهاراتي في التعليم والمجالات المرتبطة به من خلال الاجتهاد والعمل الجاد. أتمتع بمهارات قوية في العمل الجماعي والتواصل، وأستمتع بالتعاون مع الآخرين في بيئات مختلفة. أتطلع لاكتساب مزيد من الخبرة في البيئات الأكاديمية والمهنية لتعزيز معرفتي وبناء قدراتي والمساهمة بفاعلية أينما عملت."],
+t_deg:["Academic Degree","بڕوانامەی ئەکادیمی","الشهادة الأكاديمية"],
+deg:["Bachelor's student in English Education, College of Education, University of Raparin","خوێندکاری بەکالۆریۆس لە بەشی ئینگلیزی، کۆلێژی پەروەردە، زانکۆی ڕاپەڕین","طالب بكالوريوس في اللغة الإنجليزية، كلية التربية، جامعة رابرين"],
+t_train:["Certification & Training","بڕوانامە و ڕاهێنان","الشهادات والتدريب"],
+t_exp:["Experience","ئەزموون","الخبرات"],
+t_skills:["Skills, Software & Language","تواناکان، سۆفتوێر و زمان","المهارات والبرامج واللغات"],
+t_hon:["Honorary Recognition","ڕێزلێنان","التكريمات"],
+t_contact:["Address & Contact","ناونیشان و پەیوەندی","العنوان والتواصل"],
+addr:["Kurdistan - Sulaymaniyah - Qaladiza","کوردستان - سلێمانی - قەڵادزێ","كردستان - السليمانية - قلعة دزة"],
+s_sk:["Skills","تواناکان","المهارات"],
+s_sw:["Software","سۆفتوێر","البرامج"],
+s_lg:["Language","زمان","اللغات"]
+};
+const ROLES=[["English Education Student","Graphic Designer","Social Media Manager","Project Coordinator"],["خوێندکاری ئینگلیزی","گرافیک دیزاینەر","بەڕێوەبەری سۆشیاڵ میدیا","هەماهەنگکاری پڕۆژە"],["طالب لغة إنجليزية","مصمم جرافيك","مدير وسائل التواصل","منسق مشاريع"]];
+const NAV=[["home",["Home","سەرەکی","الرئيسية"]],["about",["About","دەربارە","نبذة"]],["training",["Training","ڕاهێنان","التدريب"]],["experience",["Experience","ئەزموون","الخبرات"]],["skills",["Skills","تواناکان","المهارات"]],["honors",["Honors","ڕێزلێنان","التكريم"]],["contact",["Contact","پەیوەندی","تواصل"]]];
+const O={ytn:["Youth Network Kurdistan, Hasar Organization, and UNICEF","تۆڕی گەنجانی کوردستان، ڕێکخراوی حەسار و یونیسێف","شبكة شباب كردستان ومنظمة حصار واليونيسف"],mila:["Mila Institute","پەیمانگای میلا","معهد ميلا"],ryd:["Raparin Youth Directorate","بەڕێوەبەرایەتی گەنجانی ڕاپەڕین","مديرية شباب رابرين"]};
+const TR=[
+[["Green Leaders Initiative Programme (GLI) Certification","بڕوانامەی پڕۆگرامی دەستپێشخەری ڕابەرانی سەوز (GLI)","شهادة برنامج مبادرة القادة الخضر (GLI)"],O.ytn,2026],
+[["C.V Preparation, Job Search and Interviewing Skills Certification","بڕوانامەی ئامادەکردنی CV، گەڕان بەدوای کار و شارەزایی چاوپێکەوتن","شهادة إعداد السيرة الذاتية والبحث عن عمل ومهارات المقابلة"],["The Migrant Resource Center Sulaymaniyah","سەنتەری ڕاوێژکاری کۆچ، سلێمانی وەزارەتی ناوخۆ، حوکمەتی هەرێمی کوردستان","مركز موارد المهاجرين، السليمانية"],2026],
+[["The Impact of Story Telling on Content Creation Certification","بڕوانامەی کاریگەری چیرۆکگێڕانەوە لەسەر بەرهەمهێنانی ناوەڕۆک","شهادة تأثير السرد القصصي على صناعة المحتوى"],["SPARK, Networks of Change II programme, Sparda Organisation, The Netherlands Ministry of Foreign Affairs","SPARK، پڕۆگرامی تۆڕەکانی گۆڕانکاری II، ڕێکخراوی Sparda، وەزارەتی دەرەوەی هۆڵەندا","SPARK وبرنامج شبكات التغيير II ومنظمة Sparda ووزارة الخارجية الهولندية"],2025],
+[["Mental Health & Online Well-being Workshop Certification","بڕوانامەی وۆرکشۆپی تەندروستی دەروونی و خۆشگوزەرانی ئۆنلاین","شهادة ورشة الصحة النفسية والرفاهية على الإنترنت"],["Kurdistan Save the Children, Save the Children International","ڕێکخراوی Save the Children لە کوردستان، Save the Children International","منظمة إنقاذ الطفولة في كردستان، Save the Children International"],2025],
+[["English as a Second Language (ESL) Programme","پڕۆگرامی زمانی ئینگلیزی وەک زمانی دووەم (ESL)","برنامج اللغة الإنجليزية كلغة ثانية (ESL)"],O.mila,2025],
+[["English Language Course Certification","بڕوانامەی خولی زمانی ئینگلیزی","شهادة دورة اللغة الإنجليزية"],["Lezan Institute","پەیمانگای لێزان","معهد لزان"],2024],
+[["English Learning Course Interchange (ESL) Level Two Certification","بڕوانامەی خولی فێربوونی ئینگلیزی (ESL) ئاستی دوو","شهادة دورة تعلم الإنجليزية (ESL) المستوى الثاني"],O.mila,2024],
+[["Developing a Personal Plan Certification","بڕوانامەی داڕشتنی پلانی کەسی","شهادة تطوير خطة شخصية"],O.ryd,2023],
+[["Beginner Level Arabic Language Certification","بڕوانامەی زمانی عەرەبی ئاستی سەرەتایی","شهادة اللغة العربية للمبتدئين"],O.ryd,2023]
+];
+const EX=[
+["Volunteered in supporting low-income students at the University of Raparin by assisting with educational activities, providing academic guidance, helping organize student programs, and contributing to initiatives aimed at improving access to education and student welfare.","وەک خۆبەخش پشتگیری قوتابییە کەمدەرامەتەکانی زانکۆی ڕاپەڕینم کردووە، لە چالاکی پەروەردەیی، ڕێنمایی ئەکادیمی، ڕێکخستنی پڕۆگرامی قوتابیان و بەشداری لە هەوڵەکانی باشترکردنی دەستڕاگەیشتن بە خوێندن و خۆشگوزەرانی قوتابیان.","تطوعت لدعم الطلبة ذوي الدخل المحدود في جامعة رابرين عبر المساعدة في الأنشطة التعليمية وتقديم الإرشاد الأكاديمي وتنظيم برامج الطلبة والمساهمة في مبادرات تحسين فرص التعليم ورفاهية الطلبة."],
+["Participated in various humanitarian activities and student support programs, working with teams to assist individuals in need, promote community engagement, and contribute to projects focused on social development and student well-being.","بەشداربووم لە چالاکی مرۆیی و پڕۆگرامی پشتگیری قوتابیان جۆراوجۆر، لەگەڵ تیمەکان یارمەتی کەسانی پێویستم داوە، بەشداری کۆمەڵگەم بەرز کردووەتەوە و لە پڕۆژەکانی گەشەی کۆمەڵایەتی و خۆشگوزەرانی قوتابیان کارم کردووە.","شاركت في أنشطة إنسانية وبرامج دعم الطلبة متنوعة، وعملت مع الفرق لمساعدة المحتاجين وتعزيز المشاركة المجتمعية والمساهمة في مشاريع التنمية الاجتماعية ورفاهية الطلبة."],
+["Assisted in educational and youth-related activities by helping organize workshops, seminars, and awareness campaigns, supporting learning opportunities, and encouraging active participation among young people in academic and community programs.","یارمەتیدەر بووم لە چالاکی پەروەردەیی و گەنجان بە ڕێکخستنی وۆرکشۆپ، سیمینار و کەمپەینی هۆشیارکردنەوە، پشتگیریکردنی دەرفەتی فێربوون و هاندانی گەنجان بۆ بەشداری چالاک لە پڕۆگرامی ئەکادیمی و کۆمەڵایەتی.","ساعدت في الأنشطة التعليمية والشبابية بتنظيم ورش عمل وندوات وحملات توعية ودعم فرص التعلم وتشجيع الشباب على المشاركة الفعالة في البرامج الأكاديمية والمجتمعية."],
+["Gained three months of experience in managing professional training courses, language programs, and environmental activities, including planning schedules, coordinating participants, supporting trainers, monitoring activities, and ensuring the successful implementation of program objectives.","سێ مانگ ئەزموونم هەیە لە بەڕێوەبردنی خولی ڕاهێنانی پیشەیی، پڕۆگرامی زمان و چالاکی ژینگەیی، لەوانە داڕشتنی خشتە، هەماهەنگی بەشداربووان، پشتگیری ڕاهێنەران، چاودێری چالاکییەکان و دڵنیابوون لە جێبەجێکردنی ئامانجەکانی پڕۆگرام.","اكتسبت ثلاثة أشهر من الخبرة في إدارة الدورات التدريبية المهنية وبرامج اللغة والأنشطة البيئية، شملت وضع الجداول وتنسيق المشاركين ودعم المدربين ومتابعة الأنشطة وضمان تحقيق أهداف البرنامج."],
+["Acquired four months of professional experience within an organization, working in communications, media relations, project coordination, and administrative support: assisting with internal and external communications, coordinating project activities, preparing reports and documents, organizing meetings, and supporting daily operations.","چوار مانگ ئەزموونی پیشەییم لە ڕێکخراوێک بەدەست هێناوە، لە بواری پەیوەندی، پەیوەندی میدیایی، هەماهەنگی پڕۆژە و پشتگیری کارگێڕی: یارمەتی پەیوەندی ناوخۆیی و دەرەکی، هەماهەنگی چالاکی پڕۆژە، ئامادەکردنی ڕاپۆرت و بەڵگە، ڕێکخستنی کۆبوونەوە و پشتگیری کاری ڕۆژانە.","اكتسبت أربعة أشهر من الخبرة المهنية داخل منظمة في مجالات الاتصال والعلاقات الإعلامية وتنسيق المشاريع والدعم الإداري: المساعدة في الاتصالات الداخلية والخارجية وتنسيق أنشطة المشاريع وإعداد التقارير والمستندات وتنظيم الاجتماعات ودعم العمليات اليومية."]
+];
+const SK=[["Graphic Design","Social Media Manager","Communication Skills","Leadership Skills","Project Coordinating","Teaching Skills"],["دیزاینی گرافیک","بەڕێوەبەری سۆشیاڵ میدیا","توانای پەیوەندیکردن","توانای ڕابەری","هەماهەنگی پڕۆژە","توانای وانەوتنەوە"],["التصميم الجرافيكي","إدارة وسائل التواصل","مهارات التواصل","مهارات القيادة","تنسيق المشاريع","مهارات التدريس"]];
+const SW=["Adobe Photoshop","Microsoft Word","Microsoft PowerPoint","Google Docs"];
+const LG=[["Kurdish (Native)","Arabic (Beginner)","English (Pre-Intermediate)"],["کوردی (زمانی دایک)","عەرەبی (سەرەتایی)","ئینگلیزی (پێش ناوەند)"],["الكردية (اللغة الأم)","العربية (مبتدئ)","الإنجليزية (ما قبل المتوسط)"]];
+const HN=[
+[["Received a Certificate of Appreciation for humanitarian support and assistance to low-income students at University of Raparin.","ڕێزلێنانم وەرگرتووە بۆ پشتگیری مرۆیی و یارمەتیدانی قوتابییە کەمدەرامەتەکانی زانکۆی ڕاپەڕین.","حصلت على شهادة تقدير لدعمي الإنساني ومساعدتي للطلبة ذوي الدخل المحدود في جامعة رابرين."],"2025 - 2026"],
+[["Received recognition on International Youth Day for efforts, care, and service dedicated to supporting and serving young people - Raparin Youth Organisation.","لە ڕۆژی نێودەوڵەتی گەنجان ڕێزلێنراوم بۆ هەوڵ، گرنگیپێدان و خزمەتکردنی گەنجان - ڕێکخراوی گەنجانی ڕاپەڕین.","تم تكريمي في اليوم الدولي للشباب تقديراً لجهودي ورعايتي وخدمتي لدعم الشباب - منظمة شباب رابرين."],"2025"],
+[["Received an appreciation certificate in recognition of humanitarian contributions and support provided to financially disadvantaged students at the University of Raparin.","بڕوانامەی سوپاسم وەرگرتووە بۆ بەشداری مرۆیی و پشتگیری قوتابییە دارایی-کەمەکانی زانکۆی ڕاپەڕین.","حصلت على شهادة شكر تقديراً لمساهماتي الإنسانية ودعمي للطلبة المحتاجين مادياً في جامعة رابرين."],"2024 - 2025"]
+];
+const $=s=>document.querySelector(s);
+let lang='en',ti=0,ci=0,del=false,timer;
+function render(){
+  const i=L.indexOf(lang);
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='en'?'ltr':'rtl';
+  document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T[e.dataset.i][i]);
+  $('#nav').innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1][i]}</a>`).join('');
+  $('#g_train').innerHTML=TR.map(c=>`<div class="card rv"><h4>${c[0][i]}</h4><p>${c[1][i]}</p><span class="yr">${c[2]}</span></div>`).join('');
+  $('#g_exp').innerHTML=EX.map(e=>`<div class="card rv"><p>${e[i]}</p></div>`).join('');
+  const ch=a=>`<div class="chips">${a.map(x=>`<span>${x}</span>`).join('')}</div>`;
+  $('#g_skills').innerHTML=`<div class="card rv"><h3>${T.s_sk[i]}</h3>${ch(SK[i])}</div><div class="card rv"><h3>${T.s_sw[i]}</h3>${ch(SW)}</div><div class="card rv"><h3>${T.s_lg[i]}</h3>${ch(LG[i])}</div>`;
+  $('#g_hon').innerHTML=HN.map(h=>`<div class="card rv"><p>${h[0][i]}</p><span class="yr">${h[1]}</span></div>`).join('');
+  document.querySelectorAll('[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+  document.title=T.name[i];
+  ti=0;ci=0;del=false;watch();
+  try{localStorage.setItem('lang',lang)}catch(e){}
+}
+function type(){
+  const w=ROLES[L.indexOf(lang)][ti];
+  ci+=del?-1:1;
+  $('#ty').textContent=w.slice(0,ci);
+  let d=del?45:90;
+  if(!del&&ci===w.length){del=true;d=1400}
+  else if(del&&ci===0){del=false;ti=(ti+1)%4;d=300}
+  clearTimeout(timer);timer=setTimeout(type,d);
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+function watch(){document.querySelectorAll('.rv:not(.in)').forEach(e=>io.observe(e))}
+document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{lang=b.dataset.l;render()});
+function theme(t){document.documentElement.dataset.theme=t;$('#th').textContent=t==='dark'?'☀':'☾';try{localStorage.setItem('theme',t)}catch(e){}}
+$('#th').onclick=()=>theme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+try{lang=localStorage.getItem('lang')||'en';theme(localStorage.getItem('theme')||'dark')}catch(e){}
+render();type();
+const secs=[...document.querySelectorAll('section')];
+addEventListener('scroll',()=>{let c='home';secs.forEach(s=>{if(scrollY>=s.offsetTop-160)c=s.id});document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+c))},{passive:true});
+</script>
+</body>
+</html>
